@@ -9,17 +9,19 @@ function isOnScreen(elem) {
     var $elem = jQuery(elem)
 
     var top = 0
-    if (window.innerHeight >= 900) {
-        top = $elem.offset().top + 150
-    } else if (window.innerHeight >= 700) {
-        top = $elem.offset().top + 100
-    } else if (window.innerHeight >= 500) {
-        top = $elem.offset().top + 50
-    } else {
-        top = $elem.offset().top
-    }
+    // if (window.innerHeight >= 700) {
+    //     top = $elem.offset().top + 150
+    // } else if (window.innerHeight >= 700) {
+    //     top = $elem.offset().top + 100
+    // } else if (window.innerHeight >= 500) {
+    //     top = $elem.offset().top + 50
+    // } else {
+    //     top = $elem.offset().top
+    // }
+
+    top = $elem.offset().top + 100
     var height = $elem.height()
-    var bottom = top + height
+    var bottom = top + height + 200
 
     return (top >= viewport_top && top < viewport_bottom) ||
         (bottom > viewport_top && bottom <= viewport_bottom) ||
