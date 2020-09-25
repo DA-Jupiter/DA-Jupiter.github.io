@@ -1,0 +1,489 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    line-height: 30px;
+    font-family: helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #fff;
+}
+
+#menu {
+    position: sticky;
+    top: 0;
+    background-color: #000;
+    box-sizing: border-box;
+    z-index: 1;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 40% auto;
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+    text-decoration: none;
+    height: 70px;
+}
+
+a {
+    text-decoration: none;
+    padding: 20px;
+    font-size: 20px;
+}
+
+#navbar > a {
+    color: #ffb380;
+    transition: box-shadow 0.5s;
+    text-align: center;
+}
+
+#logo {
+    text-align: left;
+    color: #ff8533;
+    font-size: 180%;
+    padding: 20px;
+    transition: 0s;
+}
+
+#navbar {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    width: auto;
+    opacity: 1;
+    transition: 0s;
+}
+
+#navbar > a:hover {
+    background-color: #333;
+    cursor: pointer;
+    color: #ff8533;
+    box-shadow: inset 0 -6px 0 0 #4f17e8;
+}
+
+#responsive_menu {
+    visibility: hidden;
+    position: absolute;
+    width: auto;
+    height: 25px;
+    /*overflow: hidden;*/
+    padding: 0;
+    margin-top: 22px;
+    z-index: 2;
+    right: 25px;
+    transition: 0s;
+}
+
+.line {
+    width: 30px;
+    height: 5px;
+    background-color: #ff8533;
+    padding: 0;
+    margin: auto;
+}
+
+.line:first-child, .line:nth-child(2) {
+    margin-bottom: 5px;
+}
+
+.line:first-child {
+    transform-origin: 0 0;
+    visibility: hidden;
+}
+
+.line:nth-child(2) {
+    transition: 0s;
+    visibility: hidden;
+}
+
+.line:nth-child(3) {
+    transform-origin: 0 5px;
+    visibility: hidden;
+}
+
+.anker {
+    width: 0;
+    height: 0;
+    position: relative;
+    padding-bottom: 68px;
+}
+
+.abschnitt {
+    width: 60%;
+    height: auto;
+    margin: auto;
+    background-color: #fff;
+}
+
+.contend {
+    width: 100%;
+    margin: auto;
+    height: auto;
+    padding-bottom: 20px;
+    opacity: 0;
+    position: relative;
+    top: 200px;
+}
+
+.contend > p {
+    font-size: 16px;
+}
+
+.hauptüberschrift {
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: center;
+    font-size: 32px;
+    color: #ff8533;
+    margin: 0;
+}
+
+hr {
+    background-color: #ffb380;
+    height: 2px;
+    border: none;
+    width: 90%;
+    margin: auto;
+}
+
+#div3 {
+    padding-bottom: 100px;
+}
+
+#grid_condent3 {
+    position: sticky;
+    display: grid;
+    grid-gap: 10%;
+    grid-template-columns: 1fr 1fr;
+    box-sizing: border-box;
+    font-size: 100%;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+#bild_projektleiter {
+    background: url("img/hammer_einzelfoto.JPG") no-repeat center;
+    background-size: cover;
+    object-fit: cover;
+    width: auto;
+    height: 300px;
+}
+
+#bild_projektleiter_stv {
+    background: url("img/damjan_einzelfoto.JPG") no-repeat center;
+    background-size: cover;
+    object-fit: cover;
+    width: auto;
+    height: 300px;
+}
+
+#footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5%;
+    background-color: #000;
+    height: auto;
+    box-sizing: border-box;
+    font-size: 100%;
+    width: 100%;
+    padding: 40px 10%;
+    margin: 30px auto auto;
+    overflow: hidden;
+}
+
+.footer_header {
+    color: #ff8533;
+    background-color: #000;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin: 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+#footer > div > hr {
+    width: 100%;
+    background-color: #ff8533;
+    height: 1px;
+}
+
+#footer > div {
+    background-color: #000;
+    opacity: 0;
+    position: relative;
+    top: 200px;
+}
+
+#footer > div > p {
+    padding-top: 10px;
+    text-decoration: none;
+    color: #ffb380;
+    font-size: 14px;
+    background-color: #000;
+    padding-left: 20px;
+}
+
+#footer > div > p > a {
+    color: #ff8533;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 0;
+}
+
+@media only screen and (min-width: 836px) and (max-width: 1080px) {
+    #navbar > a {
+        padding: 20px 10px;
+        font-size: 18px;
+    }
+
+    #menu > #logo {
+        font-size: 150%;
+    }
+
+    #footer {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5%;
+    }
+
+    #footer > div:last-child {
+        padding-bottom: 40px;
+    }
+
+    #grid_condent3 {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        grid-gap: 5%;
+    }
+}
+
+@media only screen and (min-width: 780px) and (max-width: 835px) {
+    #menu > #navbar > a {
+        padding: 20px 10px;
+        font-size: 18px;
+    }
+
+    #logo {
+        font-size: 150%;
+    }
+
+    #navbar {
+        grid-template-columns: auto auto auto auto auto;
+    }
+
+    #footer {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5%;
+    }
+
+    #footer > div:last-child {
+        padding-bottom: 40px;
+    }
+
+    .abschnitt {
+        margin-left: 15%;
+        width: 70%;
+    }
+
+    #grid_condent3 {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        grid-gap: 5%;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 779px) {
+    #menu {
+        padding-left: 10%;
+    }
+
+    #logo {
+        padding-left: 0;
+    }
+
+    #responsive_menu {
+        visibility: visible;
+        cursor: pointer;
+    }
+
+    .line:first-child, .line:last-child {
+        transition: 0.3s;
+    }
+
+    .line:nth-child(2) {
+        transition: 0.1s;
+    }
+
+    .line:first-child, .line:nth-child(2), .line:last-child {
+        visibility: visible;
+    }
+
+    #navbar {
+        display: block;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background-color: #000;
+        overflow: visible;
+        opacity: 0;
+    }
+
+    #navbar > a {
+        background-color: #000;
+        width: 40%;
+        float: left;
+        margin-left: 10%;
+        margin-right: 50%;
+        text-align: left;
+    }
+
+    #menu {
+        overflow: visible;
+        grid-template-columns: auto;
+    }
+
+    #grid_condent3 {
+        grid-template-columns: auto;
+    }
+
+    #footer {
+        grid-template-columns: auto;
+        font-size: 80%;
+        padding: 0;
+        grid-gap: 0;
+    }
+
+    #footer > div {
+        width: 80%;
+        margin: 0 auto auto;
+        padding-bottom: 10px;
+    }
+
+    #footer > div:last-child {
+        padding-bottom: 40px;
+    }
+
+    .footer_header {
+        padding-top: 10px;
+        text-align: left;
+    }
+
+    #footer > div:first-child {
+        padding-top: 30px;
+    }
+
+    .abschnitt {
+        margin-left: 15%;
+        width: 70%;
+    }
+
+    #grid_condent3 {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    #responsive_menu {
+        visibility: visible;
+        cursor: pointer;
+    }
+
+    .line:first-child, .line:last-child {
+        transition: 0.3s;
+    }
+
+    .line:nth-child(2) {
+        transition: 0.1s;
+    }
+
+    .line:first-child, .line:nth-child(2), .line:last-child {
+        visibility: visible;
+
+    }
+
+    #navbar {
+        /*visibility: hidden;*/
+        display: block;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background-color: #000;
+        overflow: visible;
+        opacity: 0;
+    }
+
+    #navbar > a {
+        background-color: #000;
+        width: 40%;
+        float: left;
+        margin-left: 10%;
+        margin-right: 50%;
+        padding-left: 5%;
+        text-align: left;
+        transition: opacity 0.3s;
+    }
+
+    #menu {
+        padding-left: 5%;
+        overflow: visible;
+        grid-template-columns: auto;
+    }
+
+    #logo {
+        padding-left: 0;
+    }
+
+    #grid_condent3, #footer {
+        grid-template-columns: auto;
+    }
+
+    #footer {
+        font-size: 80%;
+        padding: 0;
+        grid-gap: 0;
+    }
+
+    #footer > div {
+        width: 80%;
+        margin: auto;
+        padding-bottom: 10px;
+    }
+
+    #footer > div:last-child {
+        padding-bottom: 40px;
+    }
+
+    .footer_header {
+        text-align: left;
+    }
+
+    .footer_header:first-child {
+        padding-top: 10px;
+    }
+
+    #footer > div:first-child {
+        padding-top: 30px;
+    }
+
+    .abschnitt {
+        margin-left: 10%;
+        width: 80%;
+    }
+
+    .contend > p {
+        font-size: 90%;
+    }
+
+    #grid_condent3 {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+}
