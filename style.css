@@ -39,6 +39,11 @@ h2 {
     padding-top: 0;
 }
 
+#Ziele > p {
+    border-left: 2px solid #ff8533;
+    padding-left: 1.5em;
+}
+
 p {
     font-size: 1em;
     line-height: 1.75em;
@@ -171,7 +176,7 @@ footer > section > p {
     /*visibility: hidden;*/
 }
 
-nav > h1 {
+nav > a > h1 {
     width: max-content;
     padding: 0.125em 0 0.125em 4%;
 }
@@ -188,7 +193,7 @@ ul > li > a:hover {
     background-color: #333;
     cursor: pointer;
     color: #ff8533;
-    box-shadow: inset 0 -6px 0 0 #4f17e8;
+    box-shadow: inset 0 -6px 0 0 #102988;
 }
 
 /*main*/
@@ -258,7 +263,7 @@ ul > li > a:hover {
         height: 66px;
     }
 
-    nav > h1 {
+    nav > a > h1 {
         height: auto;
     }
 
@@ -314,14 +319,14 @@ ul > li > a:hover {
         height: auto;
     }
 
-    nav > h1, nav > ul {
+    nav > a > h1, nav > ul {
         width: 96%;
         margin: auto;
         height: auto;
         padding: 0;
     }
 
-    nav > h1 {
+    nav > a > h1 {
         font-size: 40px;
         line-height: 1.3em;
         padding-top: 0.3em;
@@ -385,7 +390,7 @@ ul > li > a:hover {
         display: block;
     }
 
-    nav > h1 {
+    nav > a > h1 {
         font-size: 30px;
         line-height: 46px;
         padding-top: 7px;
@@ -402,7 +407,7 @@ ul > li > a:hover {
 }
 
 @media only screen and (max-width: 300px) {
-    nav > h1 {
+    nav > a > h1 {
         font-size: 26px;
         line-height: 40px;
         padding-top: 10px;
