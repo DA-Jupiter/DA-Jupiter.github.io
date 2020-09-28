@@ -9,15 +9,6 @@ function isOnScreen(elem) {
     var $elem = jQuery(elem)
 
     var top = 0
-    // if (window.innerHeight >= 700) {
-    //     top = $elem.offset().top + 150
-    // } else if (window.innerHeight >= 700) {
-    //     top = $elem.offset().top + 100
-    // } else if (window.innerHeight >= 500) {
-    //     top = $elem.offset().top + 50
-    // } else {
-    //     top = $elem.offset().top
-    // }
 
     top = $elem.offset().top + 100
     var height = $elem.height()
@@ -29,8 +20,6 @@ function isOnScreen(elem) {
 }
 
 jQuery(document).ready(function () {
-
-    // if (screen.width > 1024)
     jQuery(document).ready(function () {
         if (isOnScreen(jQuery('#div1'))) {
             $('#contend1').css({opacity: 1, top: 0, transition: 0})
@@ -86,30 +75,30 @@ jQuery(document).ready(function () {
     })
 
     $(window).on('scroll', function () {
-        if (isOnScreen(jQuery('#div1'))) {
-            $('#contend1').css({opacity: 1, top: 0, transition: "top 1s, opacity 2s"})
+        if (isOnScreen(jQuery('#Idee'))) {
+            $('#Idee').css({opacity: 1, top: 0, transition: "top 1s, opacity 2s"})
         } else {
-            $('#contend1').css({opacity: 0, top: 200})
+            $('#Idee').css({opacity: 0, top: 200})
         }
-        if (isOnScreen(jQuery('#div2'))) {
-            $('#contend2').css({opacity: 1, top: 0, transition: "top 1s, opacity 2s"})
+        if (isOnScreen(jQuery('#Ziele'))) {
+            $('#Ziele').css({opacity: 1, top: 0, transition: "top 1s, opacity 2s"})
         } else {
-            $('#contend2').css({opacity: 0, top: 200})
+            $('#Ziele').css({opacity: 0, top: 200})
         }
-        if (isOnScreen(jQuery('#div3'))) {
-            $('#contend3').css({opacity: 1, top: 0, transition: "top 1s, opacity 2s"})
+        if (isOnScreen(jQuery('#Team'))) {
+            $('#Team').css({opacity: 1, top: 0, transition: "top 1s, opacity 2s"})
         } else {
-            $('#contend3').css({opacity: 0, top: 200})
+            $('#Team').css({opacity: 0, top: 200})
         }
-        if (isOnScreen(jQuery('#div4'))) {
-            $('#contend4').css({opacity: 1, top: 0, transition: "top 1s, opacity 2s"})
+        if (isOnScreen(jQuery('#Ueber_uns'))) {
+            $('#Ueber_uns').css({opacity: 1, top: 0, transition: "top 1s, opacity 2s"})
         } else {
-            $('#contend4').css({opacity: 0, top: 200})
+            $('#Ueber_uns').css({opacity: 0, top: 200})
         }
-        if (isOnScreen(jQuery('#div5'))) {
-            $('#contend5').css({opacity: 1, top: 0, transition: "top 1s, opacity 2s"})
+        if (isOnScreen(jQuery('#Fortschritt'))) {
+            $('#Fortschritt').css({opacity: 1, top: 0, transition: "top 1s, opacity 2s"})
         } else {
-            $('#contend5').css({opacity: 0, top: 200})
+            $('#Fortschritt').css({opacity: 0, top: 200})
         }
 
         //footer
@@ -155,8 +144,8 @@ jQuery(document).ready(function () {
     });
 
     $('#responsive_menu').on('click', function () {
-        if ($('#navbar').css('opacity') === '1') {
-            $('#navbar').css({'visibility': '', 'opacity': ''})
+        if ($('nav > ul').css('opacity') === '1') {
+            $('nav > ul').css({'visibility': '', 'opacity': ''})
             $('#responsive_menu > p:nth-child(2)').delay(200).css({
                 'opacity': '1',
                 // 'transition': '0.1s'
@@ -169,8 +158,9 @@ jQuery(document).ready(function () {
                 'transform': 'none',
                 // 'transition': '0.3s'
             })
-        } else if ($('#navbar').css('opacity') === '0'){
-            $('#navbar').css({
+        } else if ($('nav > ul').css('opacity') === '0'){
+            console.log("HALLO")
+            $('nav > ul').css({
                 'visibility': 'visible',
                 'opacity': '1',
                 'transition': 'opacity 0.3s'
@@ -189,4 +179,21 @@ jQuery(document).ready(function () {
             })
         }
     })
+
+    jQuery(document.body).on("click", ":not(nav, #responsive_menu, #responsive_menu *)", function(e){
+        $('nav > ul').css({'visibility': '', 'opacity': ''})
+        $('#responsive_menu > p:nth-child(2)').delay(200).css({
+            'opacity': '1',
+            // 'transition': '0.1s'
+        })
+        $('#responsive_menu > p:nth-child(1)').css({
+            'transform': 'none',
+            // 'transition': '0.3s'
+        })
+        $('#responsive_menu > p:nth-child(3)').css({
+            'transform': 'none',
+            // 'transition': '0.3s'
+        })
+        console.log(this);
+    });
 })

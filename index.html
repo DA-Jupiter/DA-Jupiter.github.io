@@ -6,173 +6,170 @@
     <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
     <meta name="viewport" content="width=device-width, intial-scale=1.0, maximum-scale=1.0">
 </head>
+
 <body>
 
-<div id="menu">
-    <a id="logo">Projekt Jupiter</a>
-
-    <div id="navbar">
-        <a id="header1" href="#header1_anker">Idee</a>
-        <a id="header2" href="#header2_anker">Ziele</a>
-        <a id="header3" href="#header3_anker">Team</a>
-        <a id="header4" href="#header4_anker">Über uns</a>
-        <a id="header5" href="#header5_anker">Fortschritt</a>
-    </div>
+<nav>
+    <h1>Projekt Jupiter</h1>
 
     <a id="responsive_menu">
         <p class="line"></p>
         <p class="line"></p>
         <p class="line"></p>
     </a>
-</div>
 
+    <ul>
+        <li><a id="header1" href="#Idee">Idee</a></li>
+        <li><a id="header2" href="#Ziele">Ziele</a></li>
+        <li><a id="header3" href="#Team">Team</a></li>
+        <li><a id="header4" href="#Ueber_uns">Über uns</a></li>
+        <li><a id="header5" href="#Fortschritt">Fortschritt</a></li>
+    </ul>
+</nav>
 
-<div class="anker" id="header1_anker"></div>
-<div class="abschnitt" id="div1">
-    <div class="contend" id="contend1">
-        <h1 class="hauptüberschrift" id="h1">Idee</h1>
+<article id="main">
+    <section id="Idee">
+        <h1>Idee</h1>
         <p class="text" id="text1">
             Das Projekt ist unterteilt in drei Subziele:<br>
-            <strong>Das erste Ziel</strong> ist das Aufsetzen einer Arbeits-/Testumgebung, welche die Anforderungen der
+            <span>Das erste Ziel</span> ist das Aufsetzen einer Arbeits-/Testumgebung, welche die Anforderungen
+            der
             fünf Jahrgänge,
-            welche sich in installierter Software unterscheiden, der Informationstechnologie individuell erfüllt, sowie
-            die Möglichkeit des Aufsetzens von Windows 10. Das Deployment beider Varianten soll per Windows Deployment
-            Services (WDS) geschehen. <br><br>
-            <strong>Das zweite Ziel</strong> ist das Erstellen von zwei Übungen, welche den Schülerinnen und Schülern
+            welche sich in installierter Software unterscheiden, der Informationstechnologie individuell erfüllt,
+            sowie
+            die Möglichkeit des Aufsetzens von Windows 10. Das Deployment beider Varianten soll per Windows
+            Deployment
+            Services (WDS) geschehen.
+        </p>
+        <p>
+            <span>Das zweite Ziel</span> ist das Erstellen von zwei Übungen, welche den Schülerinnen und
+            Schülern
             den Stoff des
-            vierten und fünften Jahrgangs näherbringen oder auffrischen soll.<br><br>
-            <strong>Das dritte Ziel</strong> ist das Programmieren einer Software, welche den Soll-Zustand mit dem
-            Ist-Zustand der ausgelesenen Konfiguration anhand von show-Befehlen von Virtual-GNS3 Routern und Switches
+            vierten und fünften Jahrgangs näherbringen oder auffrischen soll.
+        </p>
+        <p>
+            <span>Das dritte Ziel</span> ist das Programmieren einer Software, welche den Soll-Zustand mit dem
+            Ist-Zustand der ausgelesenen Konfiguration anhand von show-Befehlen von Virtual-GNS3 Routern und
+            Switches
             ausliest,
-            speichert, vergleicht und bewertet. Für den Soll-Zustand kann die Lehrkraft auswählen, welcher Befehl welche
-            Wertung hat, ob er eins-zu-eins, in einem vorgegebenen Bereich liegen muss, oder optional in dem Sollzustand
+            speichert, vergleicht und bewertet. Für den Soll-Zustand kann die Lehrkraft auswählen, welcher Befehl
+            welche
+            Wertung hat, ob er eins-zu-eins, in einem vorgegebenen Bereich liegen muss, oder optional in dem
+            Sollzustand
             vorhanden sein soll.
         </p>
-    </div>
-</div>
+    </section>
 
-<div class="anker" id="header2_anker"></div>
-<hr>
+    <hr>
 
-<div class="abschnitt" id="div2">
-    <div class="contend" id="contend2">
-        <h1 class="hauptüberschrift" id="h2">Ziele</h1>
-        <div class="text" id="text2">
-            <h4>RE-H 1 Aufsetzten eines WDS-Servers und Deployment von Windows 10</h4>
+    <section id="Ziele">
+        <h1>Ziele</h1>
+        <h2 id="Ziele_first_h2">RE-H 1 Aufsetzten eines WDS-Servers und Deployment von Windows 10</h2>
 
-            <p>Ein Windows Deployment Services Server ist aufgesetzt, welcher in einem privaten Netz alle PCs, welche
-                per
-                PXE-Boot starten, neu mit Windows 10 installiert.</p>
+        <p>Ein Windows Deployment Services Server ist aufgesetzt, welcher in einem privaten Netz alle PCs,
+            welche
+            per
+            PXE-Boot starten, neu mit Windows 10 installiert.</p>
+        <h2>RE-H 2 Deployment eines Windows Server 2019 VHD-Implementierung</h2>
+        <p>Der WDS-Server hat die Auswahlmöglichkeit nun auch einen Windows Server 2019 Core zu deployen.
+            VHD-Dateien
+            sind ebenfalls erstellt und individuell angepasst, um anschließend auf den PCs, auf welchen Windows
+            Server
+            2019 Core aufgesetzt wurde, verfügbar zu machen.</p>
+        <h2>RE-H 3 Automatisierung der VHD-Implementierung durch Skripte</h2>
+        <p>Das Mounten und Booten der unterschiedlichen VHD-Dateien auf den PCs, auf welchen Windows Server Core
+            2019
+            deployt wurde, ist per Skript implementiert. Die Lehrkraft muss für jeder Computer das richtige
+            Skript
+            für
+            die passende VHD Datei auswählen, alle anderen Vorgänge sind automatisiert.</p>
+        <h2>RE-H 4 Erstellen zweier Übungstopologien</h2>
+        <p>Es sind zwei Topologien, welche den Stoffumfang des vierten und fünften Jahrgangs umfassen, sowie
+            deren
+            Angaben und Musterlösungen, erstellt.</p>
+        <h2>RE-H 5 Autograder – Vergleich von zwei Konfigurationsdateien</h2>
+        <p>Mit Python ist ein Programm geschrieben, welches den Sollzustand mit dem Istzustand zweier
+            Konfigurationsdateien vergleicht und bewertet. Die Konfigurationsdatei ist die Running-Config eines
+            Routers
+            oder Switches.</p>
+        <h2>RE-H 6 Autograder – Auslesen der Konfiguration</h2>
+        <p>Auslesen der Konfiguration unter Verwendung von show-Befehlen. Dazu wird die IP-Adresse des
+            Computers,
+            auf
+            dem GNS3 ausgeführt wird, benötigt, damit anschließend mit Nmap alle offenen Ports evaluiert werden
+            können.
+            Somit hat das Programm alle benötigten Informationen, um Telnet Verbindungen herstellen zu können
+            und
+            Daten
+            des virtuelle Netzwerkgerätes zu erhalten.</p>
+        <h2>RE-H 7 Autograder – Bereitstellen einer GUI damit die Bewertungskriterien ausgewählt werden
+            können.</h2>
+        <p>Es ist eine GUI bereitgestellt, welche die eingelesene Musterlösung darstellt. Der Lehrkraft ist es
+            möglich
+            auszuwählen, welcher Befehl welche Wertung hat oder ob er eins-zu-eins verglichen wird. Ebenfalls
+            wird
+            verglichen, ob der Befehl in einem vorgegebenen Bereich liegt, oder optional in dem Sollzustand
+            vorhanden
+            sein soll.</p>
+    </section>
 
-            <h4>RE-H 2 Deployment eines Windows Server 2019 VHD-Implementierung</h4>
+    <hr>
 
-            <p>Der WDS-Server hat die Auswahlmöglichkeit nun auch einen Windows Server 2019 Core zu deployen.
-                VHD-Dateien
-                sind ebenfalls erstellt und individuell angepasst, um anschließend auf den PCs, auf welchen Windows
-                Server
-                2019 Core aufgesetzt wurde, verfügbar zu machen.</p>
-
-            <h4>RE-H 3 Automatisierung der VHD-Implementierung durch Skripte</h4>
-
-            <p>Das Mounten und Booten der unterschiedlichen VHD-Dateien auf den PCs, auf welchen Windows Server Core
-                2019
-                deployt wurde, ist per Skript implementiert. Die Lehrkraft muss für jeder Computer das richtige Skript
-                für
-                die passende VHD Datei auswählen, alle anderen Vorgänge sind automatisiert.</p>
-
-            <H4>RE-H 4 Erstellen zweier Übungstopologien</h4>
-
-            <p>Es sind zwei Topologien, welche den Stoffumfang des vierten und fünften Jahrgangs umfassen, sowie deren
-                Angaben und Musterlösungen, erstellt.</p>
-
-            <h4>RE-H 5 Autograder – Vergleich von zwei Konfigurationsdateien</h4>
-
-            <p>Mit Python ist ein Programm geschrieben, welches den Sollzustand mit dem Istzustand zweier
-                Konfigurationsdateien vergleicht und bewertet. Die Konfigurationsdatei ist die Running-Config eines
-                Routers
-                oder Switches.</p>
-
-            <h4>RE-H 6 Autograder – Auslesen der Konfiguration</h4>
-
-            <p>Auslesen der Konfiguration unter Verwendung von show-Befehlen. Dazu wird die IP-Adresse des Computers,
-                auf
-                dem GNS3 ausgeführt wird, benötigt, damit anschließend mit Nmap alle offenen Ports evaluiert werden
-                können.
-                Somit hat das Programm alle benötigten Informationen, um Telnet Verbindungen herstellen zu können und
-                Daten
-                des virtuelle Netzwerkgerätes zu erhalten.</p>
-
-            <h4>RE-H 7 Autograder – Bereitstellen einer GUI damit die Bewertungskriterien ausgewählt werden können.</h4>
-
-            <p>Es ist eine GUI bereitgestellt, welche die eingelesene Musterlösung darstellt. Der Lehrkraft ist es
-                möglich
-                auszuwählen, welcher Befehl welche Wertung hat oder ob er eins-zu-eins verglichen wird. Ebenfalls wird
-                verglichen, ob der Befehl in einem vorgegebenen Bereich liegt, oder optional in dem Sollzustand
-                vorhanden
-                sein soll.</p>
-
-        </div>
-    </div>
-</div>
-
-<div class="anker" id="header3_anker"></div>
-<hr>
-
-<div class="abschnitt" id="div3">
-    <div class="contend" id="contend3">
-        <h1 class="hauptüberschrift" id="h3">Team</h1>
-        <div id="grid_condent3">
-            <div class="bild_team" id="bild_projektleiter">
+    <section id="Team">
+        <h1>Team</h1>
+        <section>
+            <div>
+                <img src="img/hammer_einzelfoto.JPG" alt="Foto von Projektleiter Alexander Hammer">
+                <p>
+                    <span>Projektleiter</span>
+                    Alexander Hammer
+                </p>
             </div>
 
-            <div class="bild_team" id="bild_projektleiter_stv">
+            <div>
+                <img src="img/lazic_einzelfoto.JPG" alt="Foto von Projektleiter Stellvertreter Damjan Lazic">
+                <p>
+                    <span>Projekleiter Stv.:</span>
+                    Damjan Lazic
+                </p>
             </div>
+        </section>
+    </section>
 
-            <p class="test" id="name_projektleiter"><strong>Projektleiter:</strong> Alexander Hammer</p>
-            <p class="test" id="name_projektleiter_stv"><strong>Projekleiter Stv.:</strong> Damjan Lazic</p>
-        </div>
-    </div>
-</div>
+    <hr>
 
-<div class="anker" id="header4_anker"></div>
-<hr>
-
-<div class="abschnitt" id="div4">
-    <div class="contend" id="contend4">
-        <h1 class="hauptüberschrift" id="h4">Über uns</h1>
+    <section id="Ueber_uns">
+        <h1>Über uns</h1>
         <p class="text" id="text4">
             COMING SOON
         </p>
-    </div>
-</div>
+    </section>
 
-<div class="anker" id="header5_anker"></div>
-<hr>
+    <hr>
 
-<div class="abschnitt" id="div5">
-    <div class="contend" id="contend5">
-        <h1 class="hauptüberschrift" id="h5">Fortschritt</h1>
+    <section id="Fortschritt">
+        <h1>Fortschritt</h1>
         <p class="text" id="text5">
             COMING SOON
         </p>
-    </div>
-</div>
+    </section>
+</article>
 
-<div id="footer">
-    <div>
+<footer id="footer">
+    <section>
         <h2 class="footer_header">Projekt Jupiter</h2>
-        <hr>
+        <!--        <hr>-->
         <p>
             Dies ist die Website der Diplomarbeit Jupiter an der
             HTL Rennweg im Schuljahr 2020/21.<br>
-<!--            <a href="impressum_datenschutz.html">-->
-<!--                Impressum und Datenschutz-->
-<!--            </a>-->
+            <!--            <a href="impressum_datenschutz.html">-->
+            <!--                Impressum und Datenschutz-->
+            <!--            </a>-->
         </p>
-    </div>
-    <div>
+    </section>
+    <section>
         <h2 class="footer_header">Projektleitung</h2>
-        <hr>
+        <!--        <hr>-->
         <p>
             Name: Alexander Hammer<br>
             Email:
@@ -187,10 +184,10 @@
             Klasse: 5CN<br>
             Schuljahr: 2020/21
         </p>
-    </div>
-    <div>
+    </section>
+    <section>
         <h2 class="footer_header">Schule</h2>
-        <hr>
+        <!--        <hr>-->
         <p>
             Website: <a href="https://www.htl.rennweg.at/">HTL Wien 3 Rennweg</a><br>
             Höhere Abteilung für Informationstechnologie<br>
@@ -202,8 +199,8 @@
             </a><br>
             Tel.: +43 681 10121510
         </p>
-    </div>
-</div>
+    </section>
+</footer>
 
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="javascript.js"></script>
