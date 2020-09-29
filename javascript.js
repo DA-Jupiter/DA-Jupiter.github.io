@@ -243,6 +243,7 @@ jQuery(document).ready(function () {
             $('nav > a > h1').css({"color": "#000000"})
             $('p').css({"color": "#FFFFFF"})
             $('#Ueber_uns > p, #Fortschritt > p').css({"color": "#ff8533"})
+            $('article > section > ul li').css({"color": "#FFFFFF"})
         } else {
             $("body").css({"background-color": "#FFFFFF"})
             $('nav').css({"background-color": "#000000"})
@@ -281,7 +282,7 @@ jQuery(document).ready(function () {
                     })
                 }
             );
-            $("ul > li > a").css({
+            $("nav > ul > li > a").css({
                 "background-color": "#000000",
                 "color": "#ffb380"
             })
@@ -294,6 +295,7 @@ jQuery(document).ready(function () {
             $('p').css({"color": "#000000"})
             $('footer > section > p').css({"color": "#ffb380"})
             $('#Ueber_uns > p, #Fortschritt > p').css({"color": "#ff8533"})
+            $('article > section > ul li').css({"color": "#000000"})
         }
     })
 })
