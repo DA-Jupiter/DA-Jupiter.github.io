@@ -20,59 +20,59 @@ function isOnScreen(elem) {
 }
 
 jQuery(document).ready(function () {
-    jQuery(document).ready(function () {
-        if (isOnScreen(jQuery('#div1'))) {
-            $('#contend1').css({opacity: 1, top: 0, transition: 0})
-        } else {
-            $('#contend1').css({opacity: 0, top: 200})
-        }
-        if (isOnScreen(jQuery('#div2'))) {
-            $('#contend2').css({opacity: 1, top: 0, transition: 0})
-        } else {
-            $('#contend2').css({opacity: 0, top: 200})
-        }
-        if (isOnScreen(jQuery('#div3'))) {
-            $('#contend3').css({opacity: 1, top: 0, transition: 0})
-        } else {
-            $('#contend3').css({opacity: 0, top: 200})
-        }
-        if (isOnScreen(jQuery('#div4'))) {
-            $('#contend4').css({opacity: 1, top: 0, transition: 0})
-        } else {
-            $('#contend4').css({opacity: 0, top: 200})
-        }
-        if (isOnScreen(jQuery('#div5'))) {
-            $('#contend5').css({opacity: 1, top: 0, transition: 0})
-        } else {
-            $('#contend5').css({opacity: 0, top: 200})
-        }
-
-        //footer
-        if (isOnScreen(jQuery('#footer'))) {
-            $('#footer > div:first-child').css({
-                opacity: 1,
-                top: 0,
-                transition: "top 1s, opacity 2s",
-                transitionDelay: 0
-            })
-            $('#footer > div:nth-child(2)').css({
-                opacity: 1,
-                top: 0,
-                transition: "top 1s, opacity 2s",
-                transitionDelay: "0.5s"
-            })
-            $('#footer > div:nth-child(3)').css({
-                opacity: 1,
-                top: 0,
-                transition: "top 1s, opacity 2s",
-                transitionDelay: "1s"
-            })
-        } else {
-            $('#footer > div:first-child').css({opacity: 0, top: 200, transition: 0, transitionDelay: 0})
-            $('#footer > div:nth-child(2)').css({opacity: 0, top: 200, transition: 0, transitionDelay: 0})
-            $('#footer > div:nth-child(3)').css({opacity: 0, top: 200, transition: 0, transitionDelay: 0})
-        }
-    })
+    // jQuery(document).ready(function () {
+    //     if (isOnScreen(jQuery('#div1'))) {
+    //         $('#contend1').css({opacity: 1, top: 0, transition: 0})
+    //     } else {
+    //         $('#contend1').css({opacity: 0, top: 200})
+    //     }
+    //     if (isOnScreen(jQuery('#div2'))) {
+    //         $('#contend2').css({opacity: 1, top: 0, transition: 0})
+    //     } else {
+    //         $('#contend2').css({opacity: 0, top: 200})
+    //     }
+    //     if (isOnScreen(jQuery('#div3'))) {
+    //         $('#contend3').css({opacity: 1, top: 0, transition: 0})
+    //     } else {
+    //         $('#contend3').css({opacity: 0, top: 200})
+    //     }
+    //     if (isOnScreen(jQuery('#div4'))) {
+    //         $('#contend4').css({opacity: 1, top: 0, transition: 0})
+    //     } else {
+    //         $('#contend4').css({opacity: 0, top: 200})
+    //     }
+    //     if (isOnScreen(jQuery('#div5'))) {
+    //         $('#contend5').css({opacity: 1, top: 0, transition: 0})
+    //     } else {
+    //         $('#contend5').css({opacity: 0, top: 200})
+    //     }
+    //
+    //     //footer
+    //     if (isOnScreen(jQuery('#footer'))) {
+    //         $('#footer > div:first-child').css({
+    //             opacity: 1,
+    //             top: 0,
+    //             transition: "top 1s, opacity 2s",
+    //             transitionDelay: 0
+    //         })
+    //         $('#footer > div:nth-child(2)').css({
+    //             opacity: 1,
+    //             top: 0,
+    //             transition: "top 1s, opacity 2s",
+    //             transitionDelay: "0.5s"
+    //         })
+    //         $('#footer > div:nth-child(3)').css({
+    //             opacity: 1,
+    //             top: 0,
+    //             transition: "top 1s, opacity 2s",
+    //             transitionDelay: "1s"
+    //         })
+    //     } else {
+    //         $('#footer > div:first-child').css({opacity: 0, top: 200, transition: 0, transitionDelay: 0})
+    //         $('#footer > div:nth-child(2)').css({opacity: 0, top: 200, transition: 0, transitionDelay: 0})
+    //         $('#footer > div:nth-child(3)').css({opacity: 0, top: 200, transition: 0, transitionDelay: 0})
+    //     }
+    // })
 
     $(window).on('scroll', function () {
         if (isOnScreen(jQuery('#Idee'))) {
@@ -158,7 +158,7 @@ jQuery(document).ready(function () {
                 'transform': 'none',
                 // 'transition': '0.3s'
             })
-        } else if ($('nav > ul').css('opacity') === '0'){
+        } else if ($('nav > ul').css('opacity') === '0') {
             console.log("HALLO")
             $('nav > ul').css({
                 'visibility': 'visible',
@@ -180,7 +180,7 @@ jQuery(document).ready(function () {
         }
     })
 
-    jQuery(document.body).on("click", ":not(nav, #responsive_menu, #responsive_menu *)", function(e){
+    jQuery(document.body).on("click", ":not(nav, #responsive_menu, #responsive_menu *)", function (e) {
         $('nav > ul').css({'visibility': '', 'opacity': ''})
         $('#responsive_menu > p:nth-child(2)').delay(200).css({
             'opacity': '1',
@@ -194,6 +194,106 @@ jQuery(document).ready(function () {
             'transform': 'none',
             // 'transition': '0.3s'
         })
-        console.log(this);
+        // console.log(this);
     });
+
+    $('#Theme').on("click", function () {
+        console.log("Hallo")
+        if ($("body").css("background-color") === "rgb(255, 255, 255)") {
+            $("body").css({"background-color": "#000000"})
+            $('nav').css({"background-color": "#ffb380"})
+            $('#footer_menu').css({"background-color": "#ffb380"})
+            $('#footer_menu > ul').css({"background-color": "#ffb380"})
+            $('.line').css({"background-color": "#000000"})
+            $("nav > ul > li > a").hover(function () {
+                    $(this).css({
+                        "background-color": "#ff8533",
+                        "color": "#000000"
+                    })
+                }, function () {
+                    $(this).css({
+                        "background-color": "#ffb380",
+                        "color": "#333"
+                    })
+                }
+            )
+            $("#footer_menu > ul > li > a").hover(function () {
+                    $(this).css({
+                        "background-color": "#ff8533",
+                        "color": "#000000",
+                        "font-weight": "700"
+                    })
+                }, function () {
+                    $(this).css({
+                        "background-color": "#ffb380",
+                        "color": "#333",
+                        "font-weight": "normal"
+                    })
+                }
+            );
+            $("nav > ul > li > a").css({
+                "background-color": "#ffb380",
+                "color": "#333"
+            })
+            $("#footer_menu > ul > li > a").css({
+                "background-color": "#ffb380",
+                "color": "#333",
+                "font-weight": "normal"
+            })
+            $('nav > a > h1').css({"color": "#000000"})
+            $('p').css({"color": "#FFFFFF"})
+            $('#Ueber_uns > p, #Fortschritt > p').css({"color": "#ff8533"})
+        } else {
+            $("body").css({"background-color": "#FFFFFF"})
+            $('nav').css({"background-color": "#000000"})
+            $('#footer_menu').css({"background-color": "#333333"})
+            $('#footer_menu > ul').css({"background-color": "#333333"})
+            $('.line').css({"background-color": "#ff8533"})
+            $('ul > li > a:hover').css({
+                "background-color": "#333",
+                "color": "#ffb380"
+            })
+            $("nav > ul > li > a").hover(function () {
+                    $(this).css({
+                        "background-color": "#333",
+                        "color": "#ff8533",
+                        "box-shadow": "inset 0 -6px 0 0 #102988"
+                    })
+                }, function () {
+                    $(this).css({
+                        "background-color": "#000000",
+                        "color": "#ffb380",
+                        "box-shadow": "none"
+                    })
+                }
+            );
+            $("#footer_menu > ul > li > a").hover(function () {
+                    $(this).css({
+                        "background-color": "#000000",
+                        "color": "#ff8533",
+                        "font-weight": "normal"
+                    })
+                }, function () {
+                    $(this).css({
+                        "background-color": "#333333",
+                        "color": "#ffb380",
+                        "font-weight": "normal"
+                    })
+                }
+            );
+            $("ul > li > a").css({
+                "background-color": "#000000",
+                "color": "#ffb380"
+            })
+            $("#footer_menu > ul > li > a").css({
+                "background-color": "#333333",
+                "color": "#ffb380",
+                "font-weight": "normal"
+            })
+            $('nav > a > h1').css({"color": "#ff8533"})
+            $('p').css({"color": "#000000"})
+            $('footer > section > p').css({"color": "#ffb380"})
+            $('#Ueber_uns > p, #Fortschritt > p').css({"color": "#ff8533"})
+        }
+    })
 })
